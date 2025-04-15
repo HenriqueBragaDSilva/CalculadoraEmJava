@@ -4,10 +4,10 @@
 
 package com.mycompany.calculadorajava;
 
-/**
- *
- * @author 08234
- */
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 public class CalculadoraJava {
 
     public static void main(String[] args) {
