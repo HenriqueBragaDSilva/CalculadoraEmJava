@@ -10,7 +10,12 @@ package com.mycompany.calculadorajava;
  */
 public class CalculadoraJava {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+
+ 
+
+ 
+public static void main(String[] args) {
+new CalculadoraUI().setVisible(true);   
+}
+
 }
