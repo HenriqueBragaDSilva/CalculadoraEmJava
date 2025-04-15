@@ -19,10 +19,18 @@ public class CalculadoraUI extends javax.swing.JFrame {
      if(op == '*'){  
           res = num1 * num2;   
      }
+
+     else if(op == '+'){ 
+          res = num1 + num2;
+     }
+     else if(op == '-'){ 
+          res = num1 - num2;
+     }
+
      else if(op == '/'){ 
           res = num1 / num2;
      }
-    
+  
          return res;   
      }
     
@@ -143,8 +151,18 @@ public class CalculadoraUI extends javax.swing.JFrame {
         });
 
         jButton11.setText("+");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jButton12.setText("-");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         btnMultiplicacao.setText("X");
         btnMultiplicacao.addActionListener(new java.awt.event.ActionListener() {
@@ -332,6 +350,18 @@ String valor2 = visor.getText();
     int v2 = Integer.parseInt(valor2);  
     visor.setText(""+calcular(v, operador, v2));        
     }//GEN-LAST:event_btnResultadoActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    operador = '+';
+    valor1 = visor.getText();
+    visor.setText("");
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    operador = '-';
+    valor1 = visor.getText();
+    visor.setText("");
+    }//GEN-LAST:event_jButton12ActionPerformed
 
     /**
      * @param args the command line arguments
